@@ -3,8 +3,7 @@ import os, csv
 from pathlib import Path
 # file location
 input_file = Path("python-challenge", "PyPoll", "Resources" "election_data.csv")
-# Create empty lists to iterate through specific rows for the following variables
-total_votes = 0
+# empty lists to iterate through
 candidatename = []
 candidates=[]
 votespercandidate = {}
@@ -41,7 +40,7 @@ for candidatename in votespercandidate:
     print("----------------------------")
     # Determine winning vote count and candidate
     if (votes > wincount) and (vote_percentage > winpercent):
-# 2. If true then set winning_count = votes and winning_percent = # vote_percentage.
+# If true set wincount = votes and winpercent = # vote_percentage.
         wincount = votes
         winpercent = vote_percentage
         winning_candidate = candidatename
